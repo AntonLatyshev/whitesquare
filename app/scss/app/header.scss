@@ -1,0 +1,89 @@
+.header {
+  border-top: 5px solid $gray;
+  margin: 0 0 30px;
+  @include flex(row, wrap, center, center);
+  font-family: 'Oswald', sans-serif;
+  &__holder {
+    max-width: 960px;
+    width: 100%;
+  }
+  &__top {
+    @include flex(row, wrap, space-between, center);
+    padding: 25px 0;
+  }
+  &__logo {
+    width: 166px;
+    height: 39px;
+    a {
+      display: block;
+      height: 100%;
+      background-image: url(../images/logo.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+  &__search-row {
+    @include flex(row, wrap, space-between, center);
+    input {
+      outline: none;
+      background: $l_gray;
+      height: 30px;
+      border: 1px solid $border;
+      padding: 0 0 0 10px;
+      font-family: 'Oswald', sans-serif;
+      min-width: 160px;
+    }
+    button {
+      padding: 0;
+      font-family: 'Oswald', sans-serif;
+      cursor: pointer;
+      outline: none;
+      background: $main;
+      height: 30px;
+      color: #fff;
+      border: 2px solid $main;
+      text-transform: uppercase;
+      width: 42px;
+      transition: .3s;
+      &:hover {
+        background-color: $l_gray;
+        color: $main;
+      }
+    }
+  }
+  &__list {
+    @extend %clear-list;
+    @include flex(row, nowrap, space-between, center);
+    background-color: $l_gray;
+  }
+  &__item {
+    width: 120px;
+    text-align: center;
+    border: solid $border;
+    border-width: 1px 0 1px;
+    position: relative;
+    transition: .3s;
+    &:hover,
+    &.active {
+      border-color: $main;
+      background-color: $main;
+      a {
+        color: #fff;
+      }
+    }
+    &:nth-last-child(1) {
+      border-width: 1px 1px 1px 0;
+    }
+    &:nth-child(1) {
+      border-width: 1px 0 1px 1px;
+    }
+  }
+  &__link {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $h_text;
+  }
+}

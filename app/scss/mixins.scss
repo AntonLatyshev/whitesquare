@@ -82,3 +82,11 @@
   white-space: nowrap;
   text-overflow: $overflow;
 }
+
+@mixin flex($row: row, $wrap: wrap, $justify: center, $align: center){
+  display: flex;
+  flex-direction: $row;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+}

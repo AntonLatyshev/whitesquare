@@ -1,0 +1,95 @@
+.catalog {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .catalog-list {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+
+    .catalog-item {
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.3);
+        opacity: 0;
+        visibility: hidden;
+        .overlay-icon {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin: -49px 0 0 -49px;
+          width: 98px;
+          height: 98px;
+          border-radius: 50%;
+          background-color: #fff;
+        }
+      }
+      img {
+        display: block;
+      }
+      .item-name {
+        color: #fff;
+        position: absolute;
+        z-index: 3;
+      }
+      &.first {
+        .item-name {
+          bottom: 30px;
+          right: 30px;
+          font-size: 21px;
+        }
+      }
+      &.second {
+        .item-name {
+          top: 15px;
+          left: 10px;
+          font-size: 16px;
+        }
+      }
+      &.third {
+        .item-name {
+          bottom: 15px;
+          left: 10px;
+          font-size: 16px;
+        }
+      }
+      &.fouth {
+        .item-name {
+          bottom: 20px;
+          right: 15px;
+          font-size: 21px;
+        }
+      }
+      &.fifth {
+        .item-name {
+          bottom: 30px;
+          right: 30px;
+          font-size: 21px;
+        }
+      }
+      &.sixth {
+        .item-name {
+          bottom: 22px;
+          left: 20px;
+          font-size: 21px;
+        }
+      }
+      &.seventh {
+        .item-name {
+          top: 30px;
+          left: 20px;
+          font-size: 21px;
+        }
+      }
+    }
+  }
+}
